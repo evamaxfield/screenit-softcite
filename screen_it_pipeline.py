@@ -18,7 +18,7 @@ version('lmdb')
 # !cut -d ',' -f1 config/comparison_full_set.csv | tail -n +2 > config/comparison_full_set-pmcids.csv
 
 harvester = Harverster(config_path="config/config-harvester.json", dump_metadata=True)
-harvester.harvest_pmcids("config/comparison_full_set-pmcids-short.csv")
+harvester.harvest_dois("config/small-set-dois.csv")
 
 # Not clear to me if the resulting tei.xml files are used by the client?
 # Running it is not idempotent, seems to repeat even if the tei.xml files are there?
